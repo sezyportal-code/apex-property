@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/contexts/AuthContext";
 
 const navLinks = [
   { name: "Properties", href: "/properties" },
   { name: "Investments", href: "/investments" },
   { name: "Agents", href: "/agents" },
+  { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];
 
@@ -16,6 +18,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { user, isAuthenticated, logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,12 +74,30 @@ export function Navbar() {
 
             {/* Desktop Actions */}
             <div className="hidden md:flex items-center space-x-3">
-              <Button variant="ghost" size="sm">
-                Sign In
-              </Button>
-              <Button variant="luxury" size="sm">
-                Get Started
-              </Button>
+              {isAuthenticated ? (
+                <>
+                  <Link to="/dashboard" className="flex items-center gap-2 text-sm">
+                    <img 
+                      src={user?.avatar} 
+                      alt={user?.name} 
+                      className="w-8 h-8 rounded-full object-cover"
+                    />
+                    <span className="hidden lg:inline">{user?.name?.split(" ")[0]}</span>
+                  </Link>
+                  <Button variant="ghost" size="sm" onClick={logout}>
+                    <LogOut size={16} />
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button variant="ghost" size="sm" asChild>
+                    <Link to="/auth">Sign In</Link>
+                  </Button>
+                  <Button variant="luxury" size="sm" asChild>
+                    <Link to="/auth">Get Started</Link>
+                  </Button>
+                </>
+              )}
             </div>
 
             {/* Mobile Menu Button */}
@@ -120,15 +141,28 @@ export function Navbar() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.5 }}
                 className="pt-8 space-y-3"
               >
-                <Button variant="outline" className="w-full" size="lg">
-                  Sign In
-                </Button>
-                <Button variant="luxury" className="w-full" size="lg">
-                  Get Started
-                </Button>
+                {isAuthenticated ? (
+                  <>
+                    <Button variant="outline" className="w-full" size="lg" asChild>
+                      <Link to="/dashboard">Dashboard</Link>
+                    </Button>
+                    <Button variant="ghost" className="w-full" size="lg" onClick={logout}>
+                      Sign Out
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button variant="outline" className="w-full" size="lg" asChild>
+                      <Link to="/auth">Sign In</Link>
+                    </Button>
+                    <Button variant="luxury" className="w-full" size="lg" asChild>
+                      <Link to="/auth">Get Started</Link>
+                    </Button>
+                  </>
+                )}
               </motion.div>
             </nav>
           </motion.div>

@@ -6,19 +6,19 @@ const footerLinks = {
   Platform: [
     { name: "Browse Properties", href: "/properties" },
     { name: "Investment Tools", href: "/investments" },
-    { name: "Market Insights", href: "/insights" },
+    { name: "Market Insights", href: "/blog" },
     { name: "Agent Network", href: "/agents" },
   ],
   Company: [
     { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/careers" },
-    { name: "Press", href: "/press" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ],
-  Legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Cookie Policy", href: "/cookies" },
+  Account: [
+    { name: "Sign In", href: "/auth" },
+    { name: "Dashboard", href: "/dashboard" },
+    { name: "Saved Properties", href: "/saved" },
   ],
 };
 
