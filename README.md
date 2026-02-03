@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# 🏡 Apex Property Silk – Real Estate Website Template
 
-## Project info
+A modern, high-quality **real estate frontend template** built with the latest web technologies. Perfect for developers, agencies, and freelancers who want a professional real estate website design that’s fast, responsive, and easy to customize.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+✨ Live Preview: https://apex-property-silk.vercel.app/
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+- Clean & modern real estate UI
+- Fully responsive (mobile, tablet, desktop)
+- Smooth animations & transitions
+- Easy to customize layout, colors, and content
+- Fast performance with modern tooling
+- Frontend-only template (connect any backend you want)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠 Tech Stack
 
-**Use your preferred IDE**
+- **React + TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Framer Motion**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Getting Started
 
-Follow these steps:
+1. **Extract the ZIP** or open the project folder.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **Install dependencies:**
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+Start the development server:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
+The site will run locally at:
 
-**Edit a file directly in GitHub**
+http://localhost:5173
+🎨 Customization
+You can easily customize:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Text & content: Edit files in the src folder
 
-**Use GitHub Codespaces**
+Images & icons: Replace files in the public folder
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Colors & styles: Modify tailwind.config.ts
 
-## What technologies are used for this project?
+Animations: Update motion effects in components
 
-This project is built with:
+This template is designed to be flexible — plug in your own backend, CMS, or API if needed.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+📁 Project Structure
+public/         # Static assets (images, icons, fonts)
+src/            # Components, pages, styles
+package.json    # Project dependencies
+vite.config.ts  # Vite configuration
+tailwind.config.ts  # Tailwind configuration
+⚠️ Important Notes
+This is a frontend UI template only.
 
-## How can I deploy this project?
+No backend, database, or authentication is included.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Buyers can connect their own backend or APIs (Supabase, Firebase, REST API, etc.).
