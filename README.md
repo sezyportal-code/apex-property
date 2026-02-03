@@ -2,8 +2,6 @@
 
 A modern, high-quality **real estate frontend template** built with the latest web technologies. Perfect for developers, agencies, and freelancers who want a professional real estate website design that’s fast, responsive, and easy to customize.
 
-✨ Live Preview: https://apex-property-silk.vercel.app/
-
 ---
 
 ## 🚀 Features
