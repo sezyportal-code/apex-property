@@ -59,8 +59,8 @@ export function CTA() {
                 <ArrowRight size={18} className="ml-2" />
               </Link>
             </Button>
-            <Button variant="hero-outline" size="xl">
-              Schedule a Consultation
+            <Button variant="hero-outline" size="xl" asChild>
+              <Link to="/contact">Schedule a Consultation</Link>
             </Button>
           </motion.div>
         </div>
